@@ -12,7 +12,7 @@ import computeDIC as dic
 #For plotting correlation coeffiecient vector
 import matplotlib.pyplot as plt
 
-def dicDistanceFromFiles(fileName1,fileName2):
+def dicDistanceFromFiles(fileName1,fileName2,plot = False):
     #Read 2 xml files
     # parse piece
     p = m21.converter.parse(fileName1)
@@ -56,5 +56,6 @@ def dicDistanceFromFiles(fileName1,fileName2):
     for i in range(dic1.shape[0]):
         coef[i] = np.corrcoef(dic1[i,:],dic2[i,:])[0][1]
         
-    plt.plot(coef)
+    if plot:
+        plt.plot(coef)
     return coef
