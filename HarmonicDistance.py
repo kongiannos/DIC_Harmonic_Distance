@@ -58,4 +58,8 @@ def dicDistanceFromFiles(fileName1,fileName2,plot = False):
         
     if plot:
         plt.plot(coef)
-    return coef
+        
+    #Calculate mean and median
+    mean = np.mean(coef)
+    median = np.median(coef)
+    return coef, mean, median
