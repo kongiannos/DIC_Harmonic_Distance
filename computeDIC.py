@@ -1,4 +1,4 @@
-imimport numpy as np
+import numpy as np
 
 def computeDICfromMIDI(cIN1, cIN2):
     cIN1 = np.array(cIN1)
